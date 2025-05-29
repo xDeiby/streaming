@@ -1,0 +1,10 @@
+services:
+  nginx:
+    container_name: nginx-rtmp
+    build:
+      context: .
+    ports:
+      - "1935:1935"
+      - "8080:80"
+    volumes:
+      - ./hls:/tmp/hls
